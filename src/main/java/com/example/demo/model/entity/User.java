@@ -1,5 +1,6 @@
 package com.example.demo.model.entity;
 
+import com.example.demo.constants.State;
 import io.swagger.annotations.ApiModelProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,5 +20,6 @@ public class User {
     private Long id;
     private String name;
     private String email;
-
+    private String password;
+    private State state;
 }
