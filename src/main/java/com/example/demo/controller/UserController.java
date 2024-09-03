@@ -19,7 +19,7 @@ import java.util.List;
 
 @Api(tags = "User Api Rest", description = "Endpoint para gestionar usuarios")
 @RestController
-@RequestMapping("api/user")
+@RequestMapping("")
 @CrossOrigin
 public class UserController {
     private final UserService userService;
