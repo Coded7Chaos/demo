@@ -1,7 +1,7 @@
 package com.example.demo.model.entity;
 
 import com.example.demo.constants.State;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,7 +16,7 @@ import lombok.Setter;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ApiModelProperty(notes="id_usuario")
+    @Schema(description="id_usuario")
     private Long id;
     private String name;
     private String email;
