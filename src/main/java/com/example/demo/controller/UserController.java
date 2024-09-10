@@ -39,8 +39,7 @@ public class UserController {
     }
     @Operation(summary = "Agrega usuarios")
     @PostMapping(path = "")
-    public ResponseEntity<Void> addUser(@Parameter(description = "Datos de usuario")
-                                                       @Valid @RequestBody UserAddDto userAddDto){
+    public ResponseEntity<Void> addUser(@Parameter(description = "Datos de usuario") @RequestBody UserAddDto userAddDto){
         userService.addUser(userAddDto);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
