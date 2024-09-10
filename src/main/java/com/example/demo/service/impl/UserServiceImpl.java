@@ -24,16 +24,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserQueryDto> getUsers(State state) {
+    public List<UserQueryDto> getUsers() {
         List<User> users;
-        if(state==null){
-            users = userRepository.findAll();
-        } else{
-            users = userRepository.getUserByState(state);
-        }
+        users = userRepository.findAll();
         List<UserQueryDto> userQueryDtos = new ArrayList<>();
-        for (User s:
-             users) {
+        for (User s: users) {
             UserQueryDto userQueryDto = new UserQueryDto();
             BeanUtils.copyProperties(s, userQueryDto);
             userQueryDtos.add(userQueryDto);

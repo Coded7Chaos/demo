@@ -29,13 +29,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    @Operation(summary = "Agrega usuarios")
+    @Operation(summary = "Lista usuarios")
     @GetMapping(path = "")
-    public ResponseEntity<List<UserQueryDto>> getUsers(@Parameter(description = "filtro de estado")
-                                        @RequestParam(required = false)  State state){
+    public ResponseEntity<List<UserQueryDto>> getUsers(){
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(userService.getUsers(state));
+                .body(userService.getUsers());
     }
     @Operation(summary = "Agrega usuarios")
     @PostMapping(path = "")

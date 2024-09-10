@@ -8,7 +8,7 @@ import com.example.demo.service.dto.user.UserUpdateDto;
 import java.util.List;
 
 public interface UserService {
-    List<UserQueryDto> getUsers(State state);
+    List<UserQueryDto> getUsers();
     void addUser(UserAddDto userAddDto);
     void updateUser(long userId, UserUpdateDto userUpdateDto);
     void deleteUser(long userId);
